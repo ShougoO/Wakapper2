@@ -21,7 +21,7 @@ export class HomePage {
       var Url = document.location.search.substring(1);
       var urlParams = new URLSearchParams(Url, new QueryEncoder());
       var Q = urlParams.get("q");
-      if (Q == "regi") {
+      if (Q == "regi" || Q == "subm") {
         this.goToPage2();
       }
     }

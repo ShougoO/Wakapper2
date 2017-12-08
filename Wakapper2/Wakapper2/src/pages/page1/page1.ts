@@ -53,7 +53,14 @@ export class Page1 {
     var marker = new google.maps.Marker({
       position: { lat: 33.9095253, lng: 130.7500793 },
       map: this.map,
-      title: 'Test'
+      title: 'Bus Stop(Test)',
+      icon: {
+        url: '../../assets/img/bus.png',
+        size: {
+          width: 33,
+          height: 33
+        }
+      }
     });
   }
 }

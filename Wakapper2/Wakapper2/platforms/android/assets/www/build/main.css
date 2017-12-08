@@ -22281,6 +22281,17 @@ page-page1 #map {
   height: 100%;
 }
 
+page-page2 #Registration {
+  position: fixed;
+  right: 5px;
+}
+
+page-submit #comments {
+  width: 80%;
+  height: 10%;
+  margin: 10%;
+}
+
 page-page3 #title {
   text-align: center;
   font-size: 50px;
@@ -22302,7 +22313,7 @@ page-page3 #content {
   /*
     -webkit-text-stroke-width: 2px;
     -webkit-text-stroke-color: #ffd800;
-*/
+    */
 }
 
 page-page3 #content table {

@@ -9,6 +9,46 @@
 
 <ion-content>
   <!--以下に設置------>
-  <button ion-button (click)="goToRegi()">アカウントの登録</button>
+  <div id="topContent">
+    <button ion-button id="Submit" (click)="goToSubm()">コメントの投稿</button>
+    <button ion-button id="Registration" (click)="goToRegi()">アカウントの登録</button>
+  </div>
+  <div id="bodyContent">
+    <ion-card>
+      <ion-card-header>
+        Test
+      </ion-card-header>
+      <ion-card-content>
+        aaaaaaaaaaaaaaaaa.
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card *ngIf="Q == 'subm'">
+      <ion-card-header>
+        Test2
+      </ion-card-header>
+      <ion-card-content #content>
+      </ion-card-content>
+    </ion-card>
+  </div>
   <!------------------>
 </ion-content>
+
+<!--
+<form #form class="test_form" target="_blank">
+  氏名 :
+  <input type="text" name="name" />
+
+  <input type="submit" (click)="postURL('../src/cgi/recv.cgi')" item-right />
+</form>
+
+    
+<ion-card>
+  <ion-card-header>
+    Test
+  </ion-card-header>
+  <ion-card-content>
+    aaaaaaaaaaaaaaaaa.
+  </ion-card-content>
+</ion-card>
+-->
