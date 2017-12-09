@@ -25,7 +25,7 @@ export class HomePage {
         this.goToPage2();
       }
     }
-
+    
     /* URL先へ遷移する
     onLink(url: string) {
         window.open(url);

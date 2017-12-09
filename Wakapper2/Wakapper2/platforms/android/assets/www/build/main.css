@@ -22281,9 +22281,13 @@ page-page1 #map {
   height: 100%;
 }
 
-page-page2 #Registration {
-  position: fixed;
-  right: 5px;
+page-page2 {
+  /*
+  #Registration{
+    position: fixed;
+    right: 5px;
+  }
+  */
 }
 
 page-submit #comments {

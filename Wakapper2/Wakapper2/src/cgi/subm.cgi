@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# cgi-name‚È‚Ç‚ÌƒXƒNƒŠƒvƒg‚Ì
-# Œ¾Œê‚ÆƒpƒX‚ÌÝ’è
+# cgi-nameãªã©ã®ã‚¹ã‚¯ãƒªãƒ—ãƒˆã®
+# è¨€èªžã¨ãƒ‘ã‚¹ã®è¨­å®š
 LANG=js_JP.UTF-8
 PATH=/usr/local/bin:$PATH
 
@@ -18,7 +18,9 @@ cgi-name -i _ -d_       > $tmp-name
 
 Comments=$(nameread comments $tmp-name)
 
-echo "{\"comments\":\"$Comments\"}" > $pag2/comment.$(date +%Y%m%d_%H%M%S).$$.json
+# echo "$Comments" > $pag2/comment.json
+echo "{\"comments\": \" $Comments \"}" > $pag2/comment.json
+# .$(date +%Y%m%d_%H%M%S).$$
 # echo "Content-type: text/html"
 echo "Location: $HTTP_REFERER?q=subm"
 echo ""

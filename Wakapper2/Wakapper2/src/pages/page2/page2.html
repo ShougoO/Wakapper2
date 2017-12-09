@@ -13,21 +13,13 @@
     <button ion-button id="Submit" (click)="goToSubm()">コメントの投稿</button>
     <button ion-button id="Registration" (click)="goToRegi()">アカウントの登録</button>
   </div>
-  <div id="bodyContent">
-    <ion-card>
+  <div #content id="bodyContent">
+    <ion-card *ngIf="Q == 'subm'">
       <ion-card-header>
         Test
       </ion-card-header>
       <ion-card-content>
-        aaaaaaaaaaaaaaaaa.
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card *ngIf="Q == 'subm'">
-      <ion-card-header>
-        Test2
-      </ion-card-header>
-      <ion-card-content #content>
+        {{this.showText}}
       </ion-card-content>
     </ion-card>
   </div>
