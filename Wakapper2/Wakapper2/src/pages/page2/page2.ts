@@ -36,13 +36,8 @@ export class Page2 {
       var jsonData = require('./comment.json');
       console.log(jsonData);
       var data = JSON.stringify(jsonData);
-      //alert(data);
       var data1 = data.split(":", 2)[1];
       var data2 = data1.split(" ", 3)[1];
-      /*
-      alert(data1);
-      alert(data2);
-      */
       this.showText = data2;
 
       /*
