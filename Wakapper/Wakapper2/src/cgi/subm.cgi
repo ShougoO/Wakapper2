@@ -19,6 +19,8 @@ cgi-name -i _ -d_       > $tmp-name
 Title=$(nameread title $tmp-name)
 Comments=$(nameread comments $tmp-name)
 
+rm -f $pag2/comment.json
+
 echo "{\"title\": \" $Title \",\"comments\": \" $Comments \"}" > $pag2/comment.json
 # .$(date +%Y%m%d_%H%M%S).$$
 # echo "Content-type: text/html"
