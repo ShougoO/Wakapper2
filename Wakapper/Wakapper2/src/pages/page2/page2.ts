@@ -33,11 +33,13 @@ export class Page2 {
       //var json_data = JSON.parse('./comment.json');
       
       var Comments = this.content.nativeElement;
-      var jsonData = require('./comment.json');
-      console.log(jsonData);
+      //var jsonData = require('./comment.json');
+      var jsonData = '{"comment": " 投稿テスト "}';
+
       var data = JSON.stringify(jsonData);
       var data1 = data.split(":", 2)[1];
-      var data2 = data1.split(" ", 3)[1];
+      var data2 = data1.split(" ", 3)[2];
+
       this.showText = data2;
 
       /*
@@ -46,19 +48,7 @@ export class Page2 {
       
       var str1 = data["suffix1"];
       var str = str1;
-      //Comments.innerHTML += str;
-      */
-      /*
-      './comment.json'
-
-      <ion-card >
-        <ion-card - header >
-          Test
-        </ion-card-header>
-        <ion - card - content >
-          aaaaaaaaaaaaaaaaa.
-        </ion-card-content>
-      </ion-card>
+      Comments.innerHTML += str;
       */
     }
   }
