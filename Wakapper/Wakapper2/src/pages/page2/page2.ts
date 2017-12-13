@@ -7,9 +7,6 @@ import { SubmForm } from './submit/submit';
 
 declare function require(x: string): any;
 
-// jsonファイルの読み込み(投稿コメント)
-import * as jsonData from './comment.json';
-
 @Component({
   selector: 'page-page2',
   templateUrl: 'page2.html'
@@ -35,8 +32,11 @@ export class Page2 {
     this.Q = urlParams.get("q");
     
     if (this.Q == "subm") {
+      // json読み込み
+      var jsonData = require('./comment.json');
+
       // htmlの挿入場所(タグの場所)を取得
-      var Comments = this.content.nativeElement;
+      //var Comments = this.content.nativeElement;
 
       // コメント切り取り
       // 1)','で区切り、titleとcommentsに分ける
