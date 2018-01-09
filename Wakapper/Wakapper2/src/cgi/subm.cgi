@@ -16,13 +16,17 @@ exec 2> $logd/LOG.$(basename $0).$(date +%Y%m%d)
 dd bs=$CONTENT_LENGTH   |
 cgi-name -i _ -d_       > $tmp-name
 
+Title=$(nameread title $tmp-name)
 Comments=$(nameread comments $tmp-name)
 
-# echo "$Comments" > $pag2/comment.json
-echo "{\"comments\": \" $Comments \"}" > $pag2/comment.json
+rm -f $pag2/comment.json
+
+echo "{\"title\": \" $Title \",\"comments\": \" $Comments \"}" > $pag2/comment.json
 # .$(date +%Y%m%d_%H%M%S).$$
 # echo "Content-type: text/html"
 echo "Location: $HTTP_REFERER?q=subm"
 echo ""
 
+rm -f $Title
+rm -f $Comments
 rm -f $tmp-*
