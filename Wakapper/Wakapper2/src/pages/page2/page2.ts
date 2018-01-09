@@ -34,7 +34,6 @@ export class Page2 {
     if (this.Q == "subm") {
       // json読み込み
       var jsonData = require('./comment.json');
-      alert(jsonData);
       // htmlの挿入場所(タグの場所)を取得
       //var Comments = this.content.nativeElement;
 
