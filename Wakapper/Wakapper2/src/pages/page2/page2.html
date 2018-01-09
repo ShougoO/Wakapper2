@@ -8,20 +8,20 @@
 </ion-header>
 
 <ion-content>
-  <!--以下に設置------>
   <div id="topContent">
     <button ion-button id="Submit" (click)="goToSubm()">コメントの投稿</button>
     <button ion-button id="Registration" (click)="goToRegi()">アカウントの登録</button>
   </div>
-  <div #content id="bodyContent">
-    <ion-card *ngIf="Q == 'subm'">
-      <ion-card-header>
-        {{this.titleData}}
-      </ion-card-header>
-      <ion-card-content>
-        {{this.commentData}}
-      </ion-card-content>
-    </ion-card>
+  <div #content id="bodyContent" *ngIf="Q == 'subm'">
+    <div *ngFor="let question of questions;">
+      <ion-card>
+        <ion-card-header>
+          {{question.title}}
+        </ion-card-header>
+        <ion-card-content>
+          {{question.comments}}
+        </ion-card-content>
+      </ion-card>
+    </div>
   </div>
-  <!------------------>
 </ion-content>

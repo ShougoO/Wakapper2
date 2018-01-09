@@ -10,6 +10,7 @@ import { Page3 } from '../pages/page3/page3';
 import { Page4 } from '../pages/page4/page4';
 
 import { DataService } from './data.service';
+import { JsonData } from './json-data';
 import { GoogleMaps } from '@ionic-native/google-maps';
 
 import { CalendarModule } from 'ionic2-calendar2';
@@ -43,6 +44,7 @@ import { CalendarModule } from 'ionic2-calendar2';
   providers: [
     GoogleMaps,
     DataService,
+    JsonData,
     { provide: ErrorHandler, useClass: IonicErrorHandler }
   ]
 })
